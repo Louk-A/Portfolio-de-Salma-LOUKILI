@@ -1,27 +1,238 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio de Salma LOUKILI</title>
-</head>
-<body>
-    <header>
-        <a href="#" class="logo">Salma Loukili</a>
 
-        <nav>
-            <a href="index.html"> Qui suis-je ?</a>
-          
-            <a href="Mon parcours scolaire.html" >Mon parcours scolaire</a>
-            <a href="Skills.html" >Skills</a>
-            <a href="Projets.html" class="active" >Projets</a>
-            <a href="Me contacter.html" >Me contacter</a>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="Salma.jpeg" alt="Salma LOUKILI">
+<header>
+    <nav class="menu"> 
+      
+      <a href="index.html"> Qui suis-je ?</a>
+      <a href="Mon parcours scolaire.html" >Mon parcours scolaire</a>
+      <a href="Skills.html" >Skills</a>
+      <a href="Projets.html" class="active" >Projets</a>
+      <a href="Me contacter.html" >Me contacter</a>
+    </nav>
+  </header>
+  <body>
+  
+    <!-- Code pour ton carrousel d’images -->
+    <section class="carousel">
+      <div class="carousel-images">
+          <img src="Styledevie.png" alt="Image 1">
+          <img src="pristine.png" alt="Image 2">
+   
+      </div>
+  </section>
+  <div class="container">
+  
+  
+  <section class="project-container">
+    <h2 class="project-title">PRISTINE : L’Aménagement Personnalisé de vos Espaces</h2>
+    <div class="project-section">
+      <p style="color: #4ebcc8;">  <strong>Description :</strong></p>
+        <p> Site vitrine spécialisé dans l'aménagement d'espaces uniques qui allient fonctionnalité et esthétisme. Qu'il s'agisse de cuisines modernes ou d'autres aménagements intérieurs, chaque projet est conçu sur mesure.</p>
+        <ul>
+          <li><strong>Points clés : </strong>Adaptation aux besoins du client, mise en valeur de l’esthétique, détails techniques.</li>
+          <li><strong>Technologies utilisées :</strong>  HTML, CSS, Bootstrap, JavaScript.</li>
+          <li><strong>
+            Images/maquettes : </strong>Photos de projets terminés, vues de la page des services, de la galerie.
+          </li>
+        </ul>
+        <a href="https://louk-a.github.io/PRISTINE/" class="button">
+          <span class="text">Consulter le projet</span>
+       </a>
+       
+        
+      </section>
+  
+      <section class="project-container">
+        <h2 class="project-title">Style de Vie : Élégance à chaque pas</h2>
+        <div class="project-section">
+          <p style="color: #4ebcc8;">  <strong>Description :</strong></p>
+            <p>Un site dédié à la mode féminine, mettant en avant des collections modernes et élégantes qui répondent aux besoins des femmes contemporaines.</p>
+            <ul>
+              <li><strong>Points clés :</strong>  Design intuitif, navigation simplifiée, expérience utilisateur fluide.</li>
+              <li><strong> Technologies utilisées :</strong> HTML, CSS, JavaScript.</li>
+              <li><strong>Images/maquettes :</strong>  Des images dans la page d’accueil, page À Propos et détails produit.</li>
+            </ul>
+        </div>  
+        <a href="https://louk-a.github.io/Styles-de-Vie/"class="button">
+          <span class="text">Consulter le projet</span>
+       </a>
+          </section>
+  
         </div>
+  <style>
+
+    
+    nav a{
+      font-size: 1.2rem;
+      color: white;
+      margin-left: 4rem;
+      font-weight: 500;
+      transition: 0.3s ease;
+      border-bottom: 3px solid transparent;
+  }
+  
+  nav a:hover,
+  nav a.active{
+      color: #5eccd8;
+      border-bottom: 3px solid #5eccd8;
+  }
+  
+    header {
+   
+      padding: 10px;
+      text-align: right;
+  }
+  
+  body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #161D6F;         
+  }
+  
+  .carousel {
+      position: relative;
+      width: 40%;
+      height: 55%;
+      top: 20px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+  }
+  
+  .carousel-images {
+      display: flex;
+      width: 100%; /* Largeur pour contenir toutes les images */
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel img {
+      width: 100%; /* Les images prennent toute la largeur du conteneur */
+      flex: 1 0 100%; /* Chaque image prend 100% de la largeur visible */
+  }
+  
+  .container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .project-container {
+  
+  width: 100%;
+  height: 150%;
+      background-color: #fff;
+      margin: 50px;
+      display: block; /* Par défaut, les éléments de type block se placent l'un sous l'autre */
+      margin-bottom: 20px; /* Espace entre les conteneurs */
+      border-radius: 8px;
+      padding: 20px;
+  
+  }
+  h2{
+    font-size: 1.2rem;
+  
+  }
+       
+  
+  .button {
+    align-items: center;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 35%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .button:active,
+  .button:hover {
+    outline: 0;
+  }
+  
+  .button span {
+    background-color: rgb(5, 6, 45);
+    padding: 10px 10px;
+    border-radius: 6px;
+    width: 100%;
+    height:100%;
+    transition: 300ms;
+  }
+  
+  .button:hover span {
+    background: none;
+  }
+  
+  .button:active {
+    transform: scale(0.9);
+  }
+  
+  /* Mobile adaptations */
+@media (max-width: 768px) {
+  /* Navbar mobile adjustments */
+  nav a {
+    font-size: 0.7rem;
+    margin-left: 1rem;
+  }
+
+  /* Carousel mobile adjustments */
+  .carousel {
+    width: 90%; /* Adapte la largeur à 90% pour mobile */
+    height:50%; /* Ajuste la hauteur pour s’adapter au contenu */
+    top: 10px; /* Réduit la marge supérieure */
+  }
+
+  .carousel-images img {
+    width: 10%; /* Assure que les images prennent toute la largeur du carrousel */
+    height: auto; /* Permet aux images de garder leur proportion */
+  }
+
+  /* Container and project section adjustments */
+  .container {
+  
+    flex-direction: column; /* Dispose les éléments verticalement */
+    gap: 0.5px; /* Réduit l'espace entre les éléments */
+  }
+
+  .project-container {
+    margin: 15px; /* Réduit la marge autour du conteneur */
+    padding: 10px; /* Réduit le padding pour un affichage plus compact */
+  }
+
+  .button {
+    max-width: 40%; /* Adapte la largeur du bouton pour mobile */
+    font-size: 1rem; /* Ajuste la taille de la police */
+  }
+}
+
+
+  </style>
+  
+  
+
+  <script>
+    let currentIndex = 0;
+  const images = document.querySelectorAll('.carousel-images img');
+  const totalImages = images.length;
+  
+  function showNextImage() {
+      currentIndex = (currentIndex + 1) % totalImages; // Passe à l'image suivante et revient à la première après la dernière
+      document.querySelector('.carousel-images').style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+  
+  setInterval(showNextImage, 3000); // Change d'image toutes les 3 secondes
+  
+  </script>

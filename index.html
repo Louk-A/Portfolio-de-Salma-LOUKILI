@@ -14,6 +14,11 @@
 </head>
 <body>
     <header>
+              <!-- Bouton de menu hamburger pour mobile -->
+              <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
         <a href="#" class="logo">Salma Loukili</a>
 
       
@@ -52,11 +57,79 @@
                 consiste à tout donner au présent. »
                 </p>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://fr.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
     
             </div>
-            <a href="#" class="btn">Me contacter</a>
+            <a href="Me contacter.html" class="btn">Me contacter</a>
         </div>
     </section>
 </body>
 </html>
+<style>
+    /* Styles Desktop */
+    nav {
+        display: flex;
+        gap: 1rem;
+    }
+  
+    /* Bouton de menu hamburger caché sur desktop */
+    .menu-toggle {
+        display: none;
+    }
+  
+    /* Styles pour Mobile */
+    @media (max-width: 768px) {
+        /* Afficher le bouton hamburger sur mobile */
+        .menu-toggle {
+            display: block;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: #fff;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+  
+        /* Styles du menu */
+        nav {
+            display: none; /* Caché par défaut */
+            position: absolute;
+            top: 3rem;
+            right: 0;
+            width: 60%;
+            background-color: #161616;
+            border-left: 3px solid #98DED9;
+            border-bottom: 3px solid #98DED9;
+            border-bottom-left-radius: 2rem;
+            padding: 1rem;
+        }
+  
+        /* Afficher le menu quand la classe active est ajoutée */
+        nav.active {
+            display: block;
+        }
+  
+        nav a {
+            display: block;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            margin: 1rem 0;
+        }
+  
+        nav a:hover,
+        nav a.active {
+            background-color: #333;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+    }
+  </style>
+  
+  <script>
+    // Script JavaScript pour activer et désactiver le menu
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('active');
+    });
+  </script>

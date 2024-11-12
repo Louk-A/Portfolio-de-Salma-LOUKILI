@@ -1,0 +1,68 @@
+<section class="home">
+  <div class="home-img">
+      <img src="6.png" alt="Salma LOUKILI">
+  </div>
+
+
+  <style>
+    
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: column;
+    align-items: flex;
+    gap: 8rem;
+    background-color:#161D6F;
+}
+
+.home-img img{
+    position: relative;
+    width: 15vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #98DED9;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        display: none; /* Menu caché par défaut */
+        top: 0;
+        right: 0;
+        width: 60%; /* Augmenté pour plus de visibilité sur mobile */
+        border-left: 3px solid #98DED9;
+        border-bottom: 3px solid #98DED9;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        z-index: 10; /* Assure que le menu reste au-dessus du contenu */
+    }
+
+    nav.active {
+        display: block; /* Menu visible quand .active est appliqué */
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.8rem; /* Ajuste la taille du texte pour les petits écrans */
+        margin: 2rem 0;    /* Espace réduit pour que le menu prenne moins de hauteur */
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: #1a1a1a; /* Ajoute une couleur de fond pour le survol */
+        border-bottom: 0.3rem solid #98DED9;
+    }
+}
+
+  </style>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +9,176 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Salma Loukili</a>
-
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav>
-            <a href="index.html" > Qui suis-je ?</a>
-          
-            <a href="Mon parcours scolaire.html" >Mon parcours scolaire</a>
+            <a href="index.html">Qui suis-je ?</a>
+            <a href="Mon parcours scolaire.html">Mon parcours scolaire</a>
             <a href="Skills.html">Skills</a>
-            <a href="Projets.html" >Projets</a>
-            <a href="Me contacter.html" class="active" >Me contacter</a>
+            <a href="Projets.html">Projets</a>
+            <a href="Me contacter.html" class="active">Me contacter</a>
         </nav>
     </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="Salma.jpeg" alt="Salma LOUKILI">
+
+    <section id="contact">
+        <div class="contact-section">
+            <h2>Contactez-moi</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Si vous souhaitez en savoir plus sur mon travail, collaborer, ou simplement discuter, laissez-moi un message ! Je serais ravie d'avoir de vos nouvelles.</p>
+                </div>
+            
+                <div class="contact-form">
+                    <form action="traitement.php" method="POST">
+                        <label for="name" style="font-size: 1.5em;">Entrez votre nom *</label>
+                        <input type="text" id="name" name="nom" placeholder="Name" required>
+                        
+                        <label for="email" style="font-size: 1.5em;">Entrez votre email *</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        
+                        <label for="message" style="font-size: 1.5em;">Entrez votre message *</label>
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                        
+                        <button type="submit"><strong>Envoyer</strong></button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <style>
+        /* Styles généraux */
+        body {
+      font-family: 'Poppins', sans-serif;    
+      background-color: #161D6F;         
+  }
+        /* Section de contact */
+        .contact-section {
+            background-color: #acdffa;
+            color: black;
+            padding: 20px;
+            margin: 50px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info {
+            font-size: 1.9em;
+            line-height: 1.5;
+            max-width: 100%;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .contact-form label {
+            font-size: 1.2em;
+            color: black;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            background-color: white;
+            border: 1px solid white;
+            padding: 8px;
+            font-size: 1.4em;
+            color: #333;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .contact-form button {
+            background-color: transparent;
+            border: 2px solid #DAEAF1;
+            padding: 8px;
+            font-size: 1.5em;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .contact-form button:hover {
+            background-color: #add8e4;
+            color: white;
+        }
+
+        /* Styles pour Desktop */
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* Styles pour Mobile */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                font-size: 2rem;
+                background: none;
+                border: none;
+                color: #fff;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 3rem;
+                right: 0;
+                width: 60%;
+                background-color: #161D6F;
+                border-left: 3px solid #98DED9;
+                border-bottom: 3px solid #98DED9;
+                border-bottom-left-radius: 2rem;
+                padding: 1rem;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                font-size: 1.2rem;
+                color: #fff;
+                text-decoration: none;
+                margin: 1rem 0;
+            }
+
+            nav a:hover,
+            nav a.active {
+                background-color: #333;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

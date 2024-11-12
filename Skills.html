@@ -1,27 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Portfolio de Salma LOUKILI</title>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Salma Loukili</a>
-
+           <!-- Bouton de menu hamburger pour mobile -->
+           <button class="menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
         <nav>
-            <a href="index.html" > Qui suis-je ?</a>
-          
-            <a href="Mon parcours scolaire.html" >Mon parcours scolaire</a>
-            <a href="Skills.html"class="active" >Skills</a>
-            <a href="Projets.html" >Projets</a>
-            <a href="Me contacter.html" >Me contacter</a>
+            <a href="index.html">Qui suis-je ?</a>
+            <a href="Mon parcours scolaire.html">Mon parcours scolaire</a>
+            <a href="Skills.html" class="active">Skills</a>
+            <a href="Projets.html">Projets</a>
+            <a href="Me contacter.html">Me contacter</a>
         </nav>
     </header>
+
     <section class="home">
         <div class="home-img">
-            <img src="Salma.jpeg" alt="Salma LOUKILI">
+            <img src="6.png" alt="Salma LOUKILI">
         </div>
+
+        <div class="container mt-3">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Skills</th>
+                        <th scope="col">Compétences Techniques</th>
+                        <th scope="col">Compétences Linguistiques</th>
+                        <th scope="col">Soft Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>HTML/CSS</td>
+                        <td>Français : Niveau C1</td>
+                        <td>Esprit d’équipe</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Python/C</td>
+                        <td>Anglais : Niveau C1</td>
+                        <td>Prise d’initiative</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Git</td>
+                        <td>Arabe : Langue maternelle</td>
+                        <td>Résolution de problèmes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <style>
+        
+        /* Styles Desktop */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            font-size: 15px;
+            height: 50px;
+        }
+
+        td {
+            font-size: 13px;
+        }
+
+        .home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            background-color: #161D6F;
+            padding: 2rem;
+        }
+
+        .home-img img {
+            width: 15vw;
+            border-radius: 50%;
+            box-shadow: 0 0 25px solid #98DED9;
+            cursor: pointer;
+            transition: 0.2s linear;
+        }
+
+        /* Styles pour Mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            table {
+                width: 100%; /* Largeur adaptée à l’écran mobile */
+            }
+
+            th, td {
+                font-size: 12px; /* Taille du texte réduite pour mobile */
+                padding: 5px;
+            }
+
+            th {
+                height: 30px; /* Hauteur réduite pour les en-têtes */
+            }
+
+            td {
+                height: 25px; /* Hauteur réduite pour les cellules */
+            }
+
+            .home {
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .home-img img {
+                width: 40vw; /* Image plus large sur mobile pour meilleure visibilité */
+            }
+        }
+    </style>
+
+<style>
+  /* Styles Desktop */
+  nav {
+      display: flex;
+      gap: 1rem;
+  }
+
+  /* Bouton de menu hamburger caché sur desktop */
+  .menu-toggle {
+      display: none;
+  }
+
+  /* Styles pour Mobile */
+  @media (max-width: 768px) {
+      /* Afficher le bouton hamburger sur mobile */
+      .menu-toggle {
+          display: block;
+          font-size: 2rem;
+          background: none;
+          border: none;
+          color: #fff;
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+      }
+
+      /* Styles du menu */
+      nav {
+          display: none; /* Caché par défaut */
+          position: absolute;
+          top: 3rem;
+          right: 0;
+          width: 60%;
+          background-color: #161616;
+          border-left: 3px solid #98DED9;
+          border-bottom: 3px solid #98DED9;
+          border-bottom-left-radius: 2rem;
+          padding: 1rem;
+      }
+
+      /* Afficher le menu quand la classe active est ajoutée */
+      nav.active {
+          display: block;
+      }
+
+      nav a {
+          display: block;
+          font-size: 1.5rem;
+          color: #fff;
+          text-decoration: none;
+          margin: 1rem 0;
+      }
+
+      nav a:hover,
+      nav a.active {
+          background-color: #333;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+      }
+  }
+</style>
+
+<script>
+  // Script JavaScript pour activer et désactiver le menu
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+  });
+</script>
+</body>
+</html>
